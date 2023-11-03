@@ -64,4 +64,13 @@ class KeypadViewTest {
       // paparazzi.gif(root, "spin", start = 500, end = 1500, fps = 30)
     }
   }
+
+  @Test
+  fun testNewViews() {
+    val binding = KeypadBinding.inflate(paparazzi.layoutInflater)
+    with(binding) {
+      amount.text = "$0"
+      paparazzi.snapshot(root, "zero dollars my new")
+    }
+  }
 }
